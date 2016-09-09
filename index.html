@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			.lis{
+				width: 100px;
+				height: 50px;
+				border: 1px solid black;	
+				position: relative;			
+			}
+			.lis a{
+				display: block;
+				color: #000000;
+				line-height: 50px;
+				text-align: center;
+				background: #E2E2E2;
+			}
+			.lis ul{
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				left: -1px;
+				top: 51px;
+				background: #FFAE34;
+				width: 120px;
+				display: none;
+			}
+			.lis ul li{
+				text-align: center;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li id="lis" class="lis">
+				<a href="#" id="link" class="text">
+					图书馆
+				</a>
+				<ul id="cont">
+					<li>历史</li>
+					<li>文学</li>
+					<li>心理</li>
+				</ul>
+			</li>
+		</ul>
+		<script>
+			/*alert(1);*/
+			document.getElementById('lis').onmouseover = show;
+			document.getElementById('lis').onmouseout = hide;
+			function show(){
+				document.getElementById('cont').style.display = 'block';
+				document.getElementById('link').style.background = 'red'; 
+			}
+			function hide(){
+				document.getElementById('cont').style.display = 'none';
+				document.getElementById('link').style.background = '#E2E2E2';
+			}
+			
+		</script>
+	</body>
+</html>
